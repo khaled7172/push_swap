@@ -6,7 +6,7 @@
 /*   By: rmsaed <rmsaed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 02:00:34 by kali              #+#    #+#             */
-/*   Updated: 2026/02/12 00:20:41 by rmsaed           ###   ########.fr       */
+/*   Updated: 2026/02/13 00:06:45 by rmsaed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,14 @@ static int	is_in_chunk(int rank, int chunk_num, int chunk_size)
 
 static int	find_chunk_element(t_node *stack, int chunk_num, int chunk_size)
 {
-	t_node	*current;
 	int		pos;
 
-	current = stack;
 	pos = 0;
-	while (current)
+	while (stack)
 	{
-		if (is_in_chunk(current->rank, chunk_num, chunk_size))
+		if (is_in_chunk(stack->rank, chunk_num, chunk_size))
 			return (pos);
-		current = current->next;
+		stack = stack->next;
 		pos++;
 	}
 	return (-1);
