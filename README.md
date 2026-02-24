@@ -36,7 +36,8 @@ Elements are moved between stacks according to their ranks to reduce unnecessary
 3. Complex strategy
 
 Based on radix sort.
-After ranking the numbers, the algorithm processes them bit by bit using their binary representation. This strategy works efficiently for large input sizes.
+After ranking the numbers, the algorithm processes them bit by bit using their binary representation.
+This strategy works efficiently for large input sizes.
 
 4. Adaptive strategy
 
